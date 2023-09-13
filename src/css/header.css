@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'PokeFon'; 
+    src: url('../../public/fonts/Pokemon\ Hollow.ttf')
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pokefon', sans-serif;
+    background-color: yellow;
+    color: blue;
+    font-weight: bolder;
+    font-size: 28px;
+}
+.score{
+    display: flex;
+    gap: 16px;
+    font-size: 18px;
+}
