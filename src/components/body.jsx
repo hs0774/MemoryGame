@@ -1,10 +1,11 @@
 import React from "react";
 import "../css/body.css";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
+import _ from 'lodash';
 
 export default function Body() {
   const [pokemonData, setPokemonData] = React.useState([]);
-  const pokemon = [149, 248, 373, 376, 445, 635, 706, 784, 887, 998];
+  const pokemon = [149, 230, 248, 330, 373, 376, 445, 612, 635, 637, 706, 715, 784, 887, 998];
 
     React.useEffect(() => {
         Promise.all(
@@ -30,16 +31,24 @@ export default function Body() {
     }, []);
   
     function handleClick(id) {
-        setPokemonData(prevData => 
-          prevData.map(data => {
-            if (id === data.id) {
-              return { ...data, isClicked: true };
-            }
-            return data;
-          })
+        setPokemonData(prevData =>
+            prevData.map(data => {
+                if (id === data.id) {
+                    return {
+                        ...data,
+                        isClicked: true
+                    };
+                }
+                return data;
+            })
         );
+        shuffleCards(); // This should be outside the if block
+    }
+    
+    
+      function shuffleCards(){
+        setPokemonData(data => _.shuffle(data));
       }
-      
 
     return (
         <div className="pokemonDiv">
