@@ -7,7 +7,6 @@
 }
 .pokemon{
     height:180px;
-    /* width:180px; */
     border: 1px solid red; 
     background-image: url('../../public/images/Pokeball.webp');
     background-size: cover;
