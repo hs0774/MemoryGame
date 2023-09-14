@@ -4,7 +4,6 @@
     grid-template-columns: repeat(5,1fr);
     gap: 12px;
     margin-left: 70px;
-    /* background-image: url('../../public/images/Pokeball.webp'); */
 }
 .pokemon{
     height:180px;

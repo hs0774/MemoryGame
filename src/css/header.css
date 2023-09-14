@@ -4,7 +4,7 @@ body{
 }
 @font-face {
     font-family: 'PokeFon'; 
-    src: url('../../public/fonts/Pokemon\ Hollow.ttf')
+    src: url('../../public/fonts/Pokemon\Hollow.ttf')
 }
 
 .header{
