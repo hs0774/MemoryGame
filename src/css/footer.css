@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'PokeFon'; 
+    src: url('../../public/fonts/Pokemon\ Hollow.ttf')
+}
+.footer{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pokefon';
+    height: 70px;
+    color: blue;
+    font-size: 20px;
+}

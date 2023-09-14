@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import Header from './components/header'
 import Body from './components/body'
+import Footer from './components/footer'
 
 function App() {
   const [scoreData,setScoreData]=React.useState(0);
@@ -25,6 +26,7 @@ function App() {
     <>
     <Header scoreData={scoreData} bestScore={bestScore}/>
     <Body changeScore={changeScore} lost={lost}/>
+    <Footer/>
     </>
   )
 }

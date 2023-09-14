@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../css/body.css";
 import _, { shuffle } from 'lodash';
 
 export default function Body({ changeScore, lost }) {
-  const [pokemonData, setPokemonData] = useState([]);
-  const [clickedPokemon, setClickedPokemon] = useState(new Set());
+  const [pokemonData, setPokemonData] = React.useState([]);
+  const [clickedPokemon, setClickedPokemon] = React.useState(new Set());
   const pokemon = [149, 248, 306, 330, 373, 376, 445, 612, 635, 637, 706, 715, 784, 887, 998];
 
-  useEffect(() => {
+  React.useEffect(() => {
     Promise.all(
       pokemon.map((dragon, id) => {
         return fetch(`https://pokeapi.co/api/v2/pokemon/${dragon}/`)
@@ -49,8 +49,7 @@ export default function Body({ changeScore, lost }) {
     if (clickedPokemon.has(id)) {
       loseGame();
     } else {
-      setClickedPokemon(prevClickedPokemon => new Set(prevClickedPokemon).add(id));
-
+      setClickedPokemon(prev => new Set(prev).add(id));
       setPokemonData(prevData =>
         prevData.map(data => {
           if (id === data.id) {

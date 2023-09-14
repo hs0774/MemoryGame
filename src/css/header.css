@@ -16,10 +16,11 @@ body{
     background-color: yellow;
     color: blue;
     font-weight: bolder;
-    font-size: 28px;
+    font-size: 22px;
 }
 .score{
     display: flex;
     gap: 16px;
     font-size: 18px;
+    margin-top: -20px;
 }
