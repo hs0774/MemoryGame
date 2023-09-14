@@ -7,21 +7,24 @@ function App() {
   const [scoreData,setScoreData]=React.useState(0);
   const [bestScore,setBestScore]=React.useState(0);
 
-  function changeScore(){
-    setScoreData(count => count+1);
+  function changeScore() {
+    setScoreData(prevScore => prevScore + 1);
   }
-
+  
+  function lost(){
+    setScoreData(0);
+  }
   React.useEffect(() => {
     if(scoreData >= bestScore){
       setBestScore(scoreData);
     }
-  },[scoreData]); // maybe add bestScore to dependency array 
+  },[scoreData,bestScore]); // maybe add bestScore to dependency array 
   
 
   return (
     <>
     <Header scoreData={scoreData} bestScore={bestScore}/>
-    <Body changeScore={changeScore}/>
+    <Body changeScore={changeScore} lost={lost}/>
     </>
   )
 }

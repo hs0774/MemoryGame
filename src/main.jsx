@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 //to do 
-//have a click update the score 
-    // but only if isClicked is false
-//update best score if score is higher than current best score
-//lose modal if click on isclicked is true card/play again 
+//have a click update the score DONE
+    // but only if isClicked is false 
+//update best score if score is higher than current best score DONE 
+//lose modal IF isclicked is true card/play again OPTIONAL IT'LL JUST RESET SCORE
 // win modal/ confetti/ play again 
